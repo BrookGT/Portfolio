@@ -1,21 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <a href="#">Portfolio</a>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
-    <script src="script.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">Biruk Gebisa</div>
+
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="profile">
+            <div class="profile-pic-container">
+                <img src="assets/photo1.jpg" alt="my Profile Picture" />
+            </div>
+            <div class="profil-text">
+                <p class="p_t_1">Hello, am</p>
+                <h1 class="name">Biruk Gebisa</h1>
+                <p class="p_t_2">am Software Engineer</p>
+                <div class="btn_container">
+                    <button
+                        class="btn-cv"
+                        onclick="window.open('../assets/Biruk Gebisa CV.docx')"
+                    >
+                        Download CV
+                    </button>
+                </div>
+                <div class="icons">
+                    <img
+                        src="assets/github1.png"
+                        alt="github icon"
+                        class="git_icon"
+                        onclick="location.href = 'https://github.com/BlessedGT'"
+                    />
+                    <img
+                        src="assets/telegram1.png"
+                        alt="telegram icon"
+                        class="tel_icon"
+                        onclick="location.href = 'https://t.me/Blessed_GT_7'"
+                    />
+                    <img
+                        src="assets/gmail1.png"
+                        alt="gmail icon"
+                        class="gm_icon"
+                        onclick="location.href = 'https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=birukgebisa7@gmail.com&hl=en'"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <p class="about_p1">Get To Know more</p>
+            <h1 class="about_title">About Me</h1>
+            <div class="about_container">
+                <div class="about_pic_cont">
+                    <img
+                        src="assets/photo-experience.jpg"
+                        alt="experience picture"
+                    />
+                </div>
+                <div class="about_details">
+                    <div class="exp_and_edu">
+                        <div class="experience_cont">
+                            <img src="" alt="experience icon" />
+                            <h3>Experience</h3>
+                            <p>
+                                - Intermediate experience on Frontend
+                                Development
+                            </p>
+                            <p>
+                                - Strong understanding of HTML, CSS, and
+                                Javascript
+                            </p>
+                        </div>
+                        <div class="education_cont">
+                            <img src="" alt="education icon" />
+                            <h3>Education</h3>
+                            <p>- 3rd Year Sofrware Engineering Student</p>
+                            <p>- In Adama Science and Technology University</p>
+                        </div>
+                    </div>
+                    <div class="about_text">
+                        <p>
+                            Experienced in Python and Competitive Programming,
+                            with expertise in Data Structures and Algorithms,
+                            including linked lists, arrays, stacks, queues,
+                            sorting, and searching.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
 </html>
