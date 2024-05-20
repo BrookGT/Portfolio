@@ -54,6 +54,10 @@ a:hover {
     cursor: default;
 }
 
+section {
+    height: 96vh;
+}
+
 /* Profile Section*/
 #profile {
     height: 86vh;
@@ -149,8 +153,10 @@ a:hover {
 /* About Section*/
 
 #about {
+    align-content: center;
     position: relative;
-    padding: 4vh 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 .about_p1 {
     text-align: center;
@@ -210,8 +216,10 @@ a:hover {
 /* Projects SEction */
 
 #projects {
+    align-content: center;
     position: relative;
-    padding: 10vh 2rem 4vh 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
 }
 
 .project_and_skill {
@@ -249,5 +257,80 @@ a:hover {
 .skills {
     padding: 1.5rem;
     border-radius: 2rem;
-    border: 0.1rem solid;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+}
+
+/* Contact me Section */
+
+#contact {
+    align-content: center;
+    position: relative;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+.contact_p1 {
+    text-align: center;
+}
+.contact_title {
+    text-align: center;
+    height: 10vh;
+    margin-top: 5vh;
+}
+
+.contact_media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gmail img {
+    height: 4vh;
+    transition: all 350ms ease;
+}
+.telegram img {
+    height: 5vh;
+}
+
+.gmail,
+.telegram {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+}
+
+.gmail a,
+.telegram a {
+    color: white;
+    text-decoration: none;
+}
+
+.gmail a:hover,
+.telegram a:hover {
+    cursor: pointer;
+    color: rgb(115, 162, 255);
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+}
+
+.gmail img:hover,
+.telegram img:hover {
+    height: 8vh;
+    transition: all 350ms ease;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+footer .navbar {
+    display: flex;
+    justify-content: center;
 }
