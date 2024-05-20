@@ -75,10 +75,10 @@ a:hover {
 }
 
 .profile-pic-container img {
-    border-radius: 50%;
+    border-radius: 45%;
     width: 100%;
     max-width: 400px;
-    height: auto;
+    height: 100%;
 }
 
 .profile-text {
@@ -150,6 +150,7 @@ a:hover {
 
 #about {
     position: relative;
+    padding: 4vh 2rem;
 }
 .about_p1 {
     text-align: center;
@@ -161,14 +162,19 @@ a:hover {
 }
 
 .about_container {
+    max-height: 500px;
     display: flex;
     gap: 2rem;
 }
 
+.about_pic_cont {
+    max-width: 450px;
+}
+
 .about_pic_cont img {
-    height: 450px;
+    height: 100%;
     width: 100%;
-    margin: auto 1vh;
+    margin: auto;
     border-radius: 1.5rem;
 }
 
@@ -176,7 +182,7 @@ a:hover {
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
-    margin-right: 1vh;
+    margin-top: 10%;
 }
 
 .experience_cont,
@@ -192,6 +198,56 @@ a:hover {
     height: 2rem;
 }
 .about_text p {
-    color: red;
-    padding: 0px 50px 0px 100px;
+    margin-bottom: 10%;
+    padding: 0px 12% 0px 12%;
+}
+
+.experience_pic,
+.education_pic {
+    max-width: 20%;
+}
+
+/* Projects SEction */
+
+#projects {
+    position: relative;
+    padding: 10vh 2rem 4vh 2rem;
+}
+
+.project_and_skill {
+    justify-content: space-around;
+    display: flex;
+    gap: 2rem;
+}
+
+.p_and_s_p1 {
+    text-align: center;
+}
+.p_and_s_title {
+    text-align: center;
+    height: 10vh;
+    margin-top: 5vh;
+}
+
+.project_title,
+.skill_title {
+    text-align: center;
+}
+
+.skill_lst {
+    justify-content: space-around;
+    display: flex;
+    gap: 2rem;
+}
+
+.skill_lst p {
+    margin-left: 1.5rem;
+    color: rgb(203, 203, 203);
+}
+
+.projects,
+.skills {
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: 0.1rem solid;
 }
