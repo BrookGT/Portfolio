@@ -12,16 +12,16 @@
             <div class="logo">Biruk Gebisa</div>
 
             <nav class="navbar">
-                <a href="#home">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
+
         </header>
 
         <section id="profile">
             <div class="profile-pic-container">
-                <img src="assets/photo5.jpg" alt="my Profile Picture" />
+                <img src="assets/photo4.jpg" alt="my Profile Picture" />
             </div>
             <div class="profil-text">
                 <p class="p_t_1">Hello, am</p>
@@ -107,7 +107,11 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/arrowdown.png" alt="arrow icon" class="downarrow" onclick="location.href = './#projects'">
+
+            <button id="profile_button" onclick="scrollToProjects()">
+            <img src="assets/arrowdown.png" alt="arrow icon" class="downarrow">
+            </button>
+
         </section>
 
         <section id="projects">
@@ -156,7 +160,10 @@
                     </div>
                 </div>
             </div>
-        <img src="assets/arrowdown.png" alt="arrow icon" class="downarrow" onclick="location.href = './#contact'">
+        <button id="project_button" onclick="scrollToContact()">
+            <img src="assets/arrowdown.png" alt="arrow icon" class="downarrow">
+        </button>
+
         </section>
         
         <section id="contact">
@@ -188,7 +195,7 @@
 
         <footer>
             <nav class="navbar">
-                <a href="#home">Home</a>
+                <a href="#profile">Home</a>
                 <a href="#about">About</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>

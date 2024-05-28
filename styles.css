@@ -76,7 +76,6 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-
     animation: slideRight 1s ease forwards;
 }
 
@@ -160,51 +159,6 @@ section {
     cursor: pointer;
 }
 
-/* Animation Functions */
-
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes slideUp {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideLeft {
-    0% {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
 /* About Section*/
 
 #about {
@@ -230,6 +184,7 @@ section {
 
 .about_pic_cont {
     max-width: 450px;
+    animation: slideRight 1s ease forwards;
 }
 
 .about_pic_cont img {
@@ -253,6 +208,7 @@ section {
     border-radius: 2rem;
     border: 0.1rem solid;
     text-align: center;
+    animation: slideLeft 1s ease forwards;
 }
 .experience_cont h3,
 .education_cont h3 {
@@ -261,6 +217,7 @@ section {
 .about_text p {
     margin-bottom: 10%;
     padding: 0px 12% 0px 12%;
+    animation: slideUp 1s ease forwards;
 }
 
 .experience_pic,
@@ -268,12 +225,28 @@ section {
     max-width: 20%;
 }
 
+#project_button,
 .downarrow {
+    border: none;
     cursor: pointer;
     position: absolute;
     right: 0.1rem;
     bottom: 2rem;
     height: 10vh;
+    animation: slideDown 1s ease forwards;
+}
+
+#projects.changed .p_and_s_p1 {
+    animation: slideDown 1s ease forwards;
+}
+#projects.changed .p_and_s_title {
+    animation: slideUp 1s ease forwards;
+}
+#projects.changed .projects {
+    animation: slideRight 1s ease forwards;
+}
+#projects.changed .skills {
+    animation: slideLeft 1s ease forwards;
 }
 
 /* Projects SEction */
@@ -321,12 +294,29 @@ section {
     padding: 1.5rem;
     border-radius: 2rem;
     border-top: 0.1rem solid;
-    border-bottom: 0.1rem solid;
+    border-left: 0.1rem solid;
+}
+
+#contact.changed .contact_p1 {
+    animation: slideDown 1s ease forwards;
+}
+#contact.changed .contact_p1 {
+    animation: slideDown 1s ease forwards;
+}
+#contact.changed .contact_title {
+    animation: slideUp 1s ease forwards;
+}
+#contact.changed .gmail {
+    animation: slideLeft 1s ease forwards;
+}
+#contact.changed .telegram {
+    animation: slideLeft 1.5s ease forwards;
 }
 
 /* Contact me Section */
 
 #contact {
+    height: 85vh;
     align-content: center;
     position: relative;
     padding-right: 2rem;
@@ -396,4 +386,49 @@ footer {
 footer .navbar {
     display: flex;
     justify-content: center;
+}
+
+/* Animation Functions */
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
