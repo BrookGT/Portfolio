@@ -7,6 +7,7 @@
 }
 
 body {
+    min-height: 100vh;
     background-color: rgb(9, 22, 42);
     font-family: "Poppins", sans-serif;
     color: white;
@@ -31,15 +32,72 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    padding: 0 2rem;
+    padding: 0 0 0 2rem;
     box-sizing: border-box;
-    background-color: #071026;
+    /* background-color: #071026; */
 }
 
-.navbar a {
-    margin: 1rem;
+nav {
+    margin-top: 2rem;
+    box-shadow: 3px 3px 5px rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li {
+    height: 50px;
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
     color: white;
     text-decoration: none;
+    display: flex;
+}
+
+.sidebar a {
+    color: black;
+}
+
+.sidebar a:hover {
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.452);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.sidebar li {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+    font-size: large;
 }
 
 a:hover {
@@ -53,24 +111,28 @@ a:hover {
     color: white;
 }
 
-.logo:hover {
-    cursor: default;
+@media (max-width: 768px) {
+    .hide {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
 }
 
-section {
-    height: 96vh;
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
 }
 
 /* Profile Section*/
 #profile {
-    height: 86vh;
     box-sizing: border-box;
     padding: 4vh 2rem;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 5rem;
-    width: 100%;
     max-width: 1200px;
 }
 
@@ -147,7 +209,7 @@ section {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    margin-left: 20%;
+    justify-content: center;
     animation: slideLeft 1.5s ease forwards;
 }
 
@@ -165,13 +227,25 @@ section {
     cursor: pointer;
 }
 
+@media (max-width: 700px), (max-height: 742px) {
+    #profile {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+}
+
+@media (min-width: 750px), (max-height: 742px) {
+    #profile {
+        display: flex;
+        height: 90vh;
+    }
+}
+
 /* About Section*/
 
 #about {
     align-content: center;
-    position: relative;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding: 0 2rem 2rem 2rem;
     background-color: #0b1937;
 }
 .about_p1 {
@@ -187,6 +261,24 @@ section {
     max-height: 500px;
     display: flex;
     gap: 2rem;
+}
+
+@media (max-width: 700px), (max-height: 742px) {
+    #about {
+        height: 170vh;
+    }
+    .about_container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 701px), (max-height: 742px) {
+    .about_container {
+        display: flex;
+    }
+    #about {
+        height: 100vh;
+    }
 }
 
 .about_pic_cont {
@@ -232,28 +324,50 @@ section {
     max-width: 20%;
 }
 
-#project_button,
-.downarrow {
+.git_repo {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 1.5s ease forwards;
+}
+
+.git_repo p {
+    padding: 1rem;
+}
+.git_repo img {
+    padding: 1rem;
+}
+
+#arrow_button {
     border: none;
     cursor: pointer;
     position: absolute;
-    right: 0.1rem;
-    bottom: 2rem;
-    height: 10vh;
-    animation: slideDown 1s ease forwards;
+    right: 0;
+    background-color: transparent;
+    z-index: 10;
+}
+
+#arrow_button img {
+    height: 6vh;
+    transition: height 250ms ease;
+}
+
+.downarrow:hover img {
+    height: 7vh;
 }
 
 #projects.changed .p_and_s_p1 {
-    animation: slideDown 1s ease forwards;
+    animation: slideDown 1.5s ease forwards;
 }
 #projects.changed .p_and_s_title {
-    animation: slideUp 1s ease forwards;
+    animation: slideUp 1.5s ease forwards;
 }
 #projects.changed .flutter_app {
-    animation: slideUp 1s ease forwards;
+    animation: slideRight 1.5s ease forwards;
 }
 #projects.changed .registration_web {
-    animation: slideUp 1.5s ease forwards;
+    animation: slideLeft 1.5s ease forwards;
 }
 #projects.changed .projects {
     animation: slideRight 1.4s ease forwards;
@@ -266,15 +380,15 @@ section {
 
 #projects {
     align-content: center;
-    position: relative;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    height: 100%;
+    padding: 0 2rem 2rem 2rem;
     background-color: #121930;
 }
 
 .project_and_skill {
     justify-content: space-around;
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 5%;
 }
@@ -312,12 +426,6 @@ section {
     border-left: 0.1rem solid;
 }
 
-.my_projects {
-    display: flex;
-    align-items: center;
-    /* gap: 5%; */
-}
-
 .flutter_app img,
 .registration_web img {
     width: 100%;
@@ -325,7 +433,6 @@ section {
     margin: auto;
     border-radius: 1.5rem;
     max-width: 300px;
-    /* object-fit: cover; */
 }
 
 .registration_web img {
@@ -336,8 +443,6 @@ section {
 .registration_web {
     flex: 1;
     text-align: center;
-    /* border-radius: 2rem;
-    border: 0.1px dashed; */
 }
 
 .flutter_app p,
@@ -346,38 +451,49 @@ section {
     margin-top: 2%;
 }
 
-@media (max-width: 1285px), (max-height: 742px) {
+@media (max-width: 1280px), (max-height: 742px) {
     .additional_image1,
     .additional_image2 {
         display: none;
     }
 }
-/* @media (min-width: 812px) and (min-height: 724px) {
-    #profile {
-        background-image: url("assets/pngwing-dots.png");
+
+@media (max-width: 730px), (max-height: 742px) {
+    .my_projects {
+        flex-wrap: wrap;
     }
-} */
+    #projects {
+        height: 100%;
+    }
+}
+
+@media (min-width: 731px), (max-height: 742px) {
+    .my_projects {
+        display: flex;
+        gap: 5%;
+    }
+}
 
 #contact.changed .contact_p1 {
-    animation: slideDown 1s ease forwards;
+    animation: slideDown 1.5s ease forwards;
 }
 #contact.changed .contact_p1 {
-    animation: slideDown 1s ease forwards;
+    animation: slideDown 1.5s ease forwards;
 }
 #contact.changed .contact_title {
-    animation: slideUp 1s ease forwards;
+    animation: slideUp 1.5s ease forwards;
 }
 #contact.changed .gmail {
-    animation: slideLeft 1s ease forwards;
+    animation: slideLeft 1.5s ease forwards;
 }
 #contact.changed .telegram {
-    animation: slideLeft 1.5s ease forwards;
+    animation: slideLeft 1s ease forwards;
 }
 
 /* Contact me Section */
 
 #contact {
-    height: 85vh;
+    height: 90vh;
     align-content: center;
     position: relative;
     padding-right: 2rem;
@@ -442,7 +558,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 10vh;
+    background-color: #071026;
 }
 
 footer .navbar {
@@ -475,7 +592,7 @@ footer .navbar {
 
 @keyframes slideRight {
     0% {
-        transform: translateX(-100px);
+        transform: translateX(-200px);
         opacity: 0;
     }
     100% {
@@ -486,7 +603,7 @@ footer .navbar {
 
 @keyframes slideLeft {
     0% {
-        transform: translateX(100px);
+        transform: translateX(200px);
         opacity: 0;
     }
     100% {
