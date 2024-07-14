@@ -170,7 +170,6 @@ a:hover {
     font-size: 2.9rem;
     opacity: 0;
     animation: slideDown 1s ease forwards;
-    /* font-family: "Source Code Pro", monospace; */
 }
 
 .p_t_2 {
@@ -227,14 +226,14 @@ a:hover {
     cursor: pointer;
 }
 
-@media (max-width: 700px), (max-height: 742px) {
+@media (max-width: 700px) {
     #profile {
         flex-wrap: wrap;
         height: 100%;
     }
 }
 
-@media (min-width: 750px), (max-height: 742px) {
+@media (min-width: 750px) {
     #profile {
         display: flex;
         height: 90vh;
@@ -263,7 +262,8 @@ a:hover {
     gap: 2rem;
 }
 
-@media (max-width: 700px), (max-height: 742px) {
+/*, (max-height: 742px)  */
+@media (max-width: 700px) {
     #about {
         height: 170vh;
     }
@@ -272,7 +272,8 @@ a:hover {
     }
 }
 
-@media (min-width: 701px), (max-height: 742px) {
+/* , (max-height: 742px) */
+@media (min-width: 701px) {
     .about_container {
         display: flex;
     }
@@ -451,14 +452,14 @@ a:hover {
     margin-top: 2%;
 }
 
-@media (max-width: 1280px), (max-height: 742px) {
+@media (max-width: 1280px) {
     .additional_image1,
     .additional_image2 {
         display: none;
     }
 }
 
-@media (max-width: 730px), (max-height: 742px) {
+@media (max-width: 730px) {
     .my_projects {
         flex-wrap: wrap;
     }
@@ -467,7 +468,7 @@ a:hover {
     }
 }
 
-@media (min-width: 731px), (max-height: 742px) {
+@media (min-width: 731px) {
     .my_projects {
         display: flex;
         gap: 5%;
